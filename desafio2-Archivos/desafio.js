@@ -9,7 +9,6 @@ class Contenedor {
 
     async save (unTitle, unPrice, unThumbnail) {
 
-        
         let leoFile
         let listado = []
         try{
