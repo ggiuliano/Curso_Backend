@@ -42,7 +42,6 @@ io.on("connection", (socket) => {
     socket.on('productoNuevo', (producto) => {
         producto.id = productos.length + 1
         productos.push(producto)
-        console.log('llegue aca wachin')
         fs.writeFileSync('./api/productos.json', JSON.stringify(productos))
         io.sockets.emit('cargar-nuevo-producto',[producto])
     })
